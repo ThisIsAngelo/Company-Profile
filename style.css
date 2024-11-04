@@ -1,0 +1,542 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fff;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: "Exo 2", sans-serif;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 6rem;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 10vh;
+  z-index: 9999;
+  transition: transform .3s ease-in-out;
+  background: #000;
+}
+
+header.aos-init.aos-animate.hidden {
+  transform: translateY(-100%);
+}
+
+header .container .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .container .content .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .container .content .logo img {
+  width: 100px;
+}
+
+header .container .content .logo a {
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+header .container .content nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+header .container .content nav a {
+  color: #7a7a7a;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s linear;
+}
+
+header .container .content nav a:hover {
+  color: #fff;
+  transition: 0.2s linear;
+}
+
+header .container .content nav .circle {
+  font-size: 8px;
+  width: 6px;
+  margin-top: 4px;
+}
+
+header .container .content .extra-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+header .container .content .extra-nav a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+}
+
+header .container .content .extra-nav button {
+  cursor: pointer;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 150px;
+  border: none;
+  border-radius: 20px;
+}
+
+header .container .content .extra-nav button .arrow {
+  width: 20px;
+  height: 20px;
+}
+
+header .container .content .extra-nav button:hover .arrow {
+  animation: shake 0.3s linear;
+}
+
+header .container .content .extra-nav .menu {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero .container .content {
+  display: flex;
+}
+
+.hero .container .content .left-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  width: 50%;
+}
+
+.hero .container .content .left-side h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.7rem;
+  font-weight: 500;
+  width: 50%;
+  color: #7a7a7a;
+}
+
+.hero .container .content .left-side h3 hr {
+  width: 7%;
+  padding: 1.5px;
+  margin-top: 4px;
+  background-color: #7a7a7a;
+  border: none;
+}
+
+.hero .container .content .left-side h1 {
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 4.5rem;
+}
+
+.hero .container .content .left-side h1 .text-background {
+  position: relative;
+  font-weight: bold;
+  font-size: 3rem;
+  font-style: italic;
+  padding: 4px 8px 8px 8px;
+  color: #000;
+  border-radius: 8px;
+}
+
+.hero .container .content .left-side h1 .text-background::before {
+  content: "";
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  animation: text-background 1.5s;
+  animation-delay: 0.5s;
+  z-index: -1;
+}
+
+.hero .container .content .left-side .action {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 75%;
+}
+
+.hero .container .content .left-side .action button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+  padding: 0.9rem 1.5rem;
+  border: 2px solid #fff;
+  border-radius: 24px;
+  color: #fff;
+  background-color: #000;
+}
+
+.hero .container .content .left-side .action button:hover .arrow {
+  animation: shake 0.3s linear;
+}
+
+.hero .container .content .left-side .action a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.hero .container .content .left-side .action a:hover {
+  text-decoration: underline;
+}
+
+.hero .container .content .right-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.hero .container .content .right-side img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.2);
+}
+
+.about {
+  margin: 4rem 0;
+}
+
+.about .container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about .container .content h1 {
+  font-size: 4rem;
+  text-align: center;
+  width: 60%;
+}
+
+.about .container .content img {
+  width: 50%;
+  height: 50%;
+  filter: grayscale(100);
+}
+
+.about .container .content .box {
+  width: 35%;
+  height: 100px;
+  border-radius: 8px;
+  animation: animate 5s linear infinite;
+  margin-top: -5rem;
+}
+
+.information,
+.support,
+.contact {
+  margin: 12rem 0;
+}
+
+.information .container .content {
+  display: flex;
+  align-items: center;
+}
+
+.information .container .content .left-side {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  width: 50%;
+}
+
+.information .container .content .left-side .novaspace {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.information .container .content .left-side .novaspace h1 {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.information .container .content .left-side .novaspace p {
+  width: 75%;
+  color: #b0b0b0;
+}
+
+.information .container .content .left-side .future-project {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.information .container .content .left-side .future-project h1 {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.information .container .content .left-side .future-project ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+  width: 75%;
+}
+
+.information .container .content .left-side .future-project ul li {
+  display: flex;
+  align-items: center;
+}
+
+.information .container .content .left-side .future-project ul li h1 {
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.information .container .content .left-side .future-project ul li p {
+  width: 85%;
+  color: #b0b0b0;
+}
+
+.information .container .content .right-side {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.information .container .content .right-side img {
+  width: 100%;
+  height: 100%;
+}
+
+.information .container .content .right-side hr {
+  padding: 4px;
+  border: none;
+  border-radius: 12px;
+  background: #fff;
+  width: 50%;
+  box-shadow: 0 0 2px #ffffff, 0 0 5px #ffffff, 0 0 10px #ffffff,
+    0 0 20px #ffffff, 0 0 40px #ffffff;
+  z-index: 2;
+}
+
+.support .container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.support .container .content h1 {
+  font-size: 4rem;
+}
+
+.support .container .content .company {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.support .container .content .company img {
+  width: 20%;
+  filter: grayscale(100);
+  transition: 0.3s linear;
+}
+
+.support .container .content .company img:hover {
+  filter: grayscale(0);
+  transition: 0.3s linear;
+}
+
+.contact .container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact .container .content hr {
+  border: none;
+  height: 200px;
+  padding: 1px;
+  background-color: #fff;
+  margin-bottom: 3rem;
+}
+
+.contact .container .content .email {
+  color: #b0b0b0;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.contact .container .content .input {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 50%;
+  margin-bottom: 4rem;
+}
+
+.contact .container .content .input input {
+  width: 65%;
+  padding: 1.5rem 2rem;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.2rem;
+  background-color: #000;
+}
+
+.contact .container .content .input button {
+  cursor: pointer;
+  width: 35%;
+  padding: 1.5rem 2rem;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #000;
+  transition: 0.3s linear;
+}
+
+.contact .container .content .input button:hover {
+  background-color: #fff;
+  color: #000;
+  transition: 0.3s linear;
+}
+
+.contact .container .content .promotion {
+  text-align: center;
+  width: 45%;
+  color: #b0b0b0;
+  font-size: 1.1rem;
+}
+
+.contact .container .content .promotion span {
+  color: #fff;
+}
+
+.contact .container .content .promotion a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(12deg);
+  }
+
+  25% {
+    transform: rotate(-13deg);
+  }
+
+  50% {
+    transform: rotate(85%);
+  }
+
+  75% {
+    transform: rotate(-13deg);
+  }
+
+  100% {
+    transform: rotate(12deg);
+  }
+}
+
+@keyframes text-background {
+  from {
+    width: 0%;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes animate {
+  0%,
+  18%,
+  20%,
+  50.1%,
+  60%,
+  65.1%,
+  80%,
+  90.1%,
+  92% {
+    background-color: #202020;
+    text-shadow: none;
+  }
+
+  18.1%,
+  20.1%,
+  30%,
+  50%,
+  60.1%,
+  65%,
+  80.1%,
+  90%,
+  92.1%,
+  100% {
+    background-color: white;
+    box-shadow: 0 0 2px #ffffff, 0 0 5px #ffffff, 0 0 10px #ffffff,
+      0 0 20px #ffffff, 0 0 40px #ffffff;
+  }
+}
